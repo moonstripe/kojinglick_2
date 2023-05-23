@@ -11,7 +11,7 @@ export const handler: Handlers = {
 
     async GET(req: any, ctx: any) {
         const url = new URL(req.url).pathname.split('/')
-        if (url[1] != 'products' | 'style.css') {
+        if (url[1] !== 'products' | 'style.css') {
             // console.log('[title] hello')
             const file = url[1]
 
