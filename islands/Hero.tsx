@@ -1,6 +1,5 @@
-import { useLayoutEffect, useRef, MutableRef } from 'preact/hooks'
+import { useLayoutEffect, useRef } from 'preact/hooks'
 import { IS_BROWSER } from '$fresh/runtime.ts'
-import { tw } from 'twind'
 import * as THREE from "three"
 import { AsciiEffect } from "AsciiEffect"
 import { OrbitControls } from "orbit"
