@@ -4,40 +4,36 @@
 
 import config from "./deno.json" assert { type: "json" };
 import * as $0 from "./routes/[title].tsx";
-import * as $1 from "./routes/_app.tsx";
-import * as $2 from "./routes/about.tsx";
-import * as $3 from "./routes/api/joke.ts";
-import * as $4 from "./routes/blog.tsx";
-import * as $5 from "./routes/index.tsx";
+import * as $1 from "./routes/about.tsx";
+import * as $2 from "./routes/api/joke.ts";
+import * as $3 from "./routes/blog.tsx";
+import * as $4 from "./routes/index.tsx";
 import * as $$0 from "./islands/BlogSidebar.tsx";
 import * as $$1 from "./islands/Counter.tsx";
-import * as $$2 from "./islands/CubeProduct.tsx";
-import * as $$3 from "./islands/Hero.tsx";
-import * as $$4 from "./islands/Logo.tsx";
-import * as $$5 from "./islands/NavBar.tsx";
-import * as $$6 from "./islands/NavWrappedPage.tsx";
-import * as $$7 from "./islands/Post.tsx";
-import * as $$8 from "./islands/RandomPost.tsx";
+import * as $$2 from "./islands/Hero.tsx";
+import * as $$3 from "./islands/Logo.tsx";
+import * as $$4 from "./islands/NavBar.tsx";
+import * as $$5 from "./islands/NavWrappedPage.tsx";
+import * as $$6 from "./islands/Post.tsx";
+import * as $$7 from "./islands/RandomPost.tsx";
 
 const manifest = {
   routes: {
     "./routes/[title].tsx": $0,
-    "./routes/_app.tsx": $1,
-    "./routes/about.tsx": $2,
-    "./routes/api/joke.ts": $3,
-    "./routes/blog.tsx": $4,
-    "./routes/index.tsx": $5,
+    "./routes/about.tsx": $1,
+    "./routes/api/joke.ts": $2,
+    "./routes/blog.tsx": $3,
+    "./routes/index.tsx": $4,
   },
   islands: {
     "./islands/BlogSidebar.tsx": $$0,
     "./islands/Counter.tsx": $$1,
-    "./islands/CubeProduct.tsx": $$2,
-    "./islands/Hero.tsx": $$3,
-    "./islands/Logo.tsx": $$4,
-    "./islands/NavBar.tsx": $$5,
-    "./islands/NavWrappedPage.tsx": $$6,
-    "./islands/Post.tsx": $$7,
-    "./islands/RandomPost.tsx": $$8,
+    "./islands/Hero.tsx": $$2,
+    "./islands/Logo.tsx": $$3,
+    "./islands/NavBar.tsx": $$4,
+    "./islands/NavWrappedPage.tsx": $$5,
+    "./islands/Post.tsx": $$6,
+    "./islands/RandomPost.tsx": $$7,
   },
   baseUrl: import.meta.url,
   config,
