@@ -5,5 +5,12 @@ export default {
   plugins: {
     ...typography(),
   },
+  theme: {
+    extend: {
+      colors: {
+        "neutral": "#bbb"
+      }
+    }
+  },
   selfURL: import.meta.url,
 } as Options;
