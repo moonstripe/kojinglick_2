@@ -11,7 +11,7 @@ Probably my biggest contribution so far has been the publication of three report
 
 ### The Changing Face of the Wagner Group: From Military Adventurism to Venture Capitalism
 
-The [first one](https://www.middlebury.edu/institute/academics/centers-initiatives/ctec/ctec-publications/changing-face-wagner-group-military), was largely my co-author's work, and it regards the financial empire of Yevgeniy Prigozhin. I was able to contribute editorial skills, as well as an open-source investigation into the hackathon that the Wagner Group undertook at their headquarters in St. Petersburg. This paper really got me thinking more deeply about the changing face of conflict, as nation-states are more restricted than ever in claiming territories and other exercizes in strategic flexibility. The Wagner Group seems less like a private military company, and more like a strategic multi-tool for Russian foreign interests.
+The [first one](https://www.middlebury.edu/institute/academics/centers-initiatives/ctec/ctec-publications/changing-face-wagner-group-military), was largely my co-author's work, and it regards the financial empire of Yevgeniy Prigozhin. I was able to contribute editorial skills, as well as an open-source investigation into the hackathon that the Wagner Group undertook at their headquarters in St. Petersburg. This paper really got me thinking more deeply about the changing face of conflict, as nation-states are more restricted than ever in claiming territories and other exercises in strategic flexibility. The Wagner Group seems less like a private military company, and more like a strategic multi-tool for Russian foreign interests.
 
 ### The Wagner Group’s Social Footprint: A Time-Series Sentiment Analysis of PMC World
 
