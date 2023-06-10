@@ -2,7 +2,7 @@
 
 1686359375
 
-It's been a while since I've updated my blog here, and since I've been primarily busy with establishing myself at [CTEC](https://www.middlebury.edu/institute/academics/centers-initiatives/ctec) I'll cover my progress there in some detail. We'll cover some of the reports I've finished up, and projects that are just starting to come into full swing as I start my full-time engagement with the center this summer.
+It's been a while since I've updated my blog here, and since I've been primarily busy with establishing myself at [CTEC](https://www.middlebury.edu/institute/academics/centers-initiatives/ctec), I'll cover my progress there in some detail. We'll cover some of the reports I've finished up, and projects that are just starting to come into full swing as I start my full-time engagement with the center this summer.
 
 ## Wagner Reports
 
