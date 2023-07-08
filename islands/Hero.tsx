@@ -42,7 +42,7 @@ export default () => {
 
             const effect = new AsciiEffect( renderer,  ' .:-=+*#%@', { invert: false, bColor: "#34d399"})
             effect.setSize(WIDTH, HEIGHT);
-            effect.domElement.setAttribute("class", 'font-monospace dark:text-green-400 text-black');
+            effect.domElement.setAttribute("class", 'font-monospace bg-clip-text bg-gradient-to-br dark:from-green-400 dark:via-lime-200 dark:to-yellow-600 from-yellow-600 via-lime-200 to-green-400');
 
             const controls = new OrbitControls(camera, effect.domElement);
             controls.enableZoom = false;
@@ -69,6 +69,6 @@ export default () => {
     }
 
     return (
-        <div ref={ref} class="select-none h-screen opacity-30 lg:pt-16 lg:pl-16 -z-50 bg-clip-text bg-gradient-to-br dark:from-green-400 dark:via-lime-200 dark:to-yellow-600 from-yellow-600 via-lime-200 to-green-400"/>
+        <div ref={ref} class="select-none h-screen opacity-30 lg:pt-16 lg:pl-16 -z-50"/>
     )
 }
