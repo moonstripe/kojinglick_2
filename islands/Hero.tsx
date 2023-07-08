@@ -69,6 +69,6 @@ export default () => {
     }
 
     return (
-        <div ref={ref} class="select-none h-screen opacity-30 lg:pt-16 lg:pl-16 -z-50"/>
+        <div ref={ref} class="select-none h-screen opacity-30 lg:pt-16 lg:pl-16 -z-50 bg-clip-text bg-gradient-to-br dark:from-green-400 dark:via-lime-200 dark:to-yellow-600 from-yellow-600 via-lime-200 to-green-400"/>
     )
 }
