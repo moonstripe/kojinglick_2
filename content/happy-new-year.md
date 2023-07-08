@@ -25,9 +25,7 @@ Socially, I've had a lot of fun. From backpacking trips, to hikes with grad scho
 
 My goal of attending MIIS was to finally get published, and it's looking like a reality with CTEC. That being said, there are many more objectives this year to attain as well.
 - I want to see the CTEC paper all the way through.
-- Start a portfolio of research and expand on my research.b
-- Continue to flesh out my [Plex](plex.tv) media server.
-  - Honestly, I had no idea how easy it would be to host a Plex server on a Raspberry Pi.
+- Start a portfolio of research and expand on my research.
 - Build my knowledge of programming, and continue to develop devOps skills.
 - Finally utilize my Pi Cloud for something.
 - Go backpacking more.
