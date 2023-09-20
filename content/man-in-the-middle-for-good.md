@@ -1,4 +1,5 @@
 # Man-in-the-middle for good?
+
 1695176341
 
 As part of the Invent2Prevent competition, which is a Department of Homeland Security sponsored startup competition with the objective of creating counter-violent-extremism programs or tools, I had the following thought: what if you could set up an HTTPS proxy on youth-owned devices to identify possible extremist content so that parents could broach the conversation before the user got too deep in extremist content?
