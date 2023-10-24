@@ -20,7 +20,7 @@ After testing OpenAI's moderation endpoint, it became clear that we had more nar
 
 ### Content management by Sanity
 
-Once again, <a href='https://www.sanity.io/' target="_blank" class="text-black dark:text-neutral">Sanity</a> comes to the rescue. Everything from our <a href='https://projectgravity.io/blog' target="_blank" class="text-black dark:text-neutral">blog</a>, to our <a href='https://projectgravity.io/research' target="_blank" class="text-black dark:text-neutral">research citations</a> page, to the deployed resources are hosted on Sanity, which allows for the whole team to get involved without pinging me everytime they find a new resource. It's incredible uptime, quick response, and incredible pricing plan made it a no brainer to integrate into the project. **Thank you, Sanity!**
+Once again, <a href='https://www.sanity.io/' target="_blank" class="text-black dark:text-neutral">Sanity</a> comes to the rescue. Everything from our <a href='https://projectgravity.io/blog' target="_blank" class="text-black dark:text-neutral">blog</a>, to our <a href='https://projectgravity.io/research' target="_blank" class="text-black dark:text-neutral">research citations</a> page, to the deployed resources, is hosted on Sanity, which allows for the whole team to get involved without pinging me everytime they find a new resource. It's incredible uptime, quick response, and incredible pricing plan made it a no brainer to integrate into the project. **Thank you, Sanity!**
 
 ### Admin Dashboard
 
