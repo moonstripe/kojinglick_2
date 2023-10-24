@@ -41,6 +41,12 @@ export default (props: PageProps) => {
                     <li class="text-gray-600 dark:text-green-400 text-xl">I have bachelor's degrees in <a href='https://mediastudies.ugis.berkeley.edu/' target="_blank" class="text-black dark:text-neutral">Media Studies</a> and <a href='https://polisci.berkeley.edu/' target="_blank" class="text-black dark:text-neutral">Political Science</a> from <a href='https://www.berkeley.edu/' target="_blank" class="text-black dark:text-neutral">UC Berkeley</a>.</li>
                 </ul>
 
+                <h1 class="text-xl dark:text-green-200 text-4xl">Projects</h1>
+                <ul class="list-disc ml-4 mb-4 mt-4 list-none">
+                    <li class="text-gray-600 dark:text-green-400 mb-2 text-xl">Project Gravity</li>
+                    <li class="text-gray-600 dark:text-green-400 mb-2 text-xl ml-4"><a href='https://projectgravity.io' target="_blank" class="text-black dark:text-neutral">Project Gravity</a> hosts <a href='https://projectgravity.io/chat' target="_blank" class="text-black dark:text-neutral">SoftLandingGPT</a>, an AI-enabled librarian for resources aimed at empowering bystanders to engage with people who may be falling down paths towards radicalization. As Tech Lead, I put together the interface, as well as the backend. I also trained and deployed <a href='https://huggingface.co/moonstripe/hate_speech_classification_v1' target="_blank" class="text-black dark:text-neutral">a custom hate-speech classification model on huggingface.co</a>.</li>
+                </ul>
+
                 <h1 class="text-xl dark:text-green-200 text-4xl">Works</h1>
                 <ul class="list-disc ml-4 mb-4 mt-4 list-none">
                     <li class="text-gray-600 dark:text-green-400 mb-2 text-xl">June, 2023: <a href='https://www.middlebury.edu/institute/academics/centers-initiatives/ctec/ctec-publications/ideas-action-yevgeniy-prigozhin-wagner-group' target="_blank" class="text-black dark:text-neutral">From Ideas to Action: Yevgeniy Prigozhin, Wagner Group, and the Operationalization of Duginism</a></li>

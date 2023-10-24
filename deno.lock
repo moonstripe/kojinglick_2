@@ -1,5 +1,5 @@
 {
-  "version": "2",
+  "version": "3",
   "remote": {
     "https://deno.land/std@0.140.0/_util/assert.ts": "e94f2eb37cebd7f199952e242c77654e43333c1ac4c5c700e929ea3aa5489f74",
     "https://deno.land/std@0.140.0/_util/os.ts": "3b4c6e27febd119d36a416d7a97bd3b0251b77c88942c8f16ee5953ea13e2e49",
@@ -188,6 +188,15 @@
     "https://deno.land/x/markdown@v2.0.0/src/marked.ts": "36cacb1b13527429bf48935d0fed1f715e71238375ba5163054d57cb6ebbe732",
     "https://deno.land/x/markdown@v2.0.0/src/parser.ts": "3b200dc5ca451f7309d794da517c8b80cfe333c3636e5beb168b29b952f10f9a",
     "https://deno.land/x/markdown@v2.0.0/src/renderer.ts": "273c5659ca11d959481504cb6db152b43bba4620a54fd70f5a57ed1ff65e0206",
+    "https://deno.land/x/markdown_moon@0.0.2/mod.ts": "495ee5abb28bff8e6e4027819ece57f61342ef7715419675c1b1be24c47fc624",
+    "https://deno.land/x/markdown_moon@0.0.2/src/block-lexer.ts": "387834ce94c0c1086596d34bc1b796ab5a2bf16d2485d38a7bf521c1a0a47286",
+    "https://deno.land/x/markdown_moon@0.0.2/src/extend-regexp.ts": "187bbc8527a00add37f05790af39e0a242dd2064270ab52a536f104d76634ab7",
+    "https://deno.land/x/markdown_moon@0.0.2/src/helpers.ts": "0c797e3300a4bbc5ad921bc6aaa789382f1f4cb7279f6f7f74175628e7dfd744",
+    "https://deno.land/x/markdown_moon@0.0.2/src/inline-lexer.ts": "a5858913d8e5ecf83b649e6febe746f7b12aaaeb0c0ee201a7d0de57540b1b17",
+    "https://deno.land/x/markdown_moon@0.0.2/src/interfaces.ts": "6ddd5c1bd1ef8bdd8fae624edaa4070c6312eb6be449dc4f113a44d095d5352f",
+    "https://deno.land/x/markdown_moon@0.0.2/src/marked.ts": "234d5fe5d6940d78ccdf861a394d5eb3855485b93fcbc77176075269fa079ed7",
+    "https://deno.land/x/markdown_moon@0.0.2/src/parser.ts": "3b200dc5ca451f7309d794da517c8b80cfe333c3636e5beb168b29b952f10f9a",
+    "https://deno.land/x/markdown_moon@0.0.2/src/renderer.ts": "273c5659ca11d959481504cb6db152b43bba4620a54fd70f5a57ed1ff65e0206",
     "https://deno.land/x/markdown_moon@release/mod.ts": "495ee5abb28bff8e6e4027819ece57f61342ef7715419675c1b1be24c47fc624",
     "https://deno.land/x/markdown_moon@release/src/block-lexer.ts": "6d13a137cb9e41a54605d601f742d03e82717b58fb003f68d1f8f20aa9b9d0e6",
     "https://deno.land/x/markdown_moon@release/src/extend-regexp.ts": "187bbc8527a00add37f05790af39e0a242dd2064270ab52a536f104d76634ab7",
