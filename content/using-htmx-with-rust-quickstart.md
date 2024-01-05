@@ -1,4 +1,4 @@
-### Using HTMX with Rust - A Quickstart Guide
+# Using HTMX with Rust - A Quickstart Guide
 
 1704478712
 ## Introduction
