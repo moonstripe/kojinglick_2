@@ -232,7 +232,7 @@ async fn decrement(tera: Data<Tera>, data: Data<AppStateCounter>) -> impl Respon
 
 These are relatively simple, but let's go through what they accomplish. In the function parameters, we've added a new item that pulls in our `AppStateCounter` for later use. In our `/` route, we pull out the numeric value from this struct. After creating a new Tera `Context`, we insert our counter value, and then pass it into our Tera rendering function in the response body. Our new `/increment` and `/decrement` route handlers are similar, pulling out the counter value and modifying it. 
 
-Finally, we'll add our new Tera template by creating a new `/templates/components` directory, and adding a file called `/templates/components/counter.html`. This is what it should look like:
+Finally, we'll add our new Tera template by creating a new `templates/components` directory, and adding a file called `templates/components/counter.html`. This is what it should look like:
 
 ```
 <p id="counter">Counter: {{ counter_value }}</p>
@@ -330,7 +330,7 @@ Let's add a new `/static` directory to house or css files. Here, add a file call
 To generate our final css files, use the tailwind command.
 
 ```
-npx tailwindcss -i /static/main.css -o /static/tailwind.css
+npx tailwindcss -i ./static/main.css -o ./static/tailwind.css
 ```
 
 Running this, it will generate `/static/tailwind.css`.
