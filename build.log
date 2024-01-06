@@ -1,0 +1,766 @@
+#1 [internal] load build definition from Dockerfile
+#1 sha256:77a214c5708cd3b1247c9ed05372a917b9bd291a0cb8d84c4e0e6bc2df8ecb47
+#1 transferring dockerfile: 949B 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load .dockerignore
+#2 sha256:350754cf1a3075a7bd1ec84e8ba5ce45c135347570332253cbd70a0010b70c94
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:20.04
+#3 sha256:cd9ed232facd22264e9246054f9c3d7a9c42bdb414a225d8f8215114646e640c
+#3 ...
+
+#4 [auth] library/ubuntu:pull token for registry-1.docker.io
+#4 sha256:c81bee1fe1d50886739e76c12880bb14f68c15887a62b25b0e4698b750d420cc
+#4 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:20.04
+#3 sha256:cd9ed232facd22264e9246054f9c3d7a9c42bdb414a225d8f8215114646e640c
+#3 DONE 1.1s
+
+#5 [downloader 1/6] FROM docker.io/library/ubuntu:20.04@sha256:f2034e7195f61334e6caff6ecf2e965f92d11e888309065da85ff50c617732b8
+#5 sha256:30ce17b12b3743461124b440cc42cdaf44ca913d54a135197bb85115dd38b5a2
+#5 CACHED
+
+#18 [internal] load build context
+#18 sha256:4f7173f0d2ae5192a92921d7c83d37331f8aa2abf077aff5ff1e745b23e070dc
+#18 transferring context: 28.00kB 0.1s done
+#18 DONE 0.3s
+
+#6 [downloader 2/6] RUN apt update -y
+#6 sha256:42be6912a19cb6814561176021b49895dfa166de845ee1c7118d6cf775bf2cdc
+#6 0.712 
+#6 0.712 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+#6 0.713 
+#6 1.504 Get:1 http://ports.ubuntu.com/ubuntu-ports focal InRelease [265 kB]
+#6 2.387 Get:2 http://ports.ubuntu.com/ubuntu-ports focal-updates InRelease [114 kB]
+#6 2.508 Get:3 http://ports.ubuntu.com/ubuntu-ports focal-backports InRelease [108 kB]
+#6 2.748 Get:4 http://ports.ubuntu.com/ubuntu-ports focal-security InRelease [114 kB]
+#6 6.709 Get:5 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 Packages [1234 kB]
+#6 8.121 Get:6 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 Packages [11.1 MB]
+#6 10.50 Get:7 http://ports.ubuntu.com/ubuntu-ports focal/restricted arm64 Packages [1317 B]
+#6 10.65 Get:8 http://ports.ubuntu.com/ubuntu-ports focal/multiverse arm64 Packages [139 kB]
+#6 10.82 Get:9 http://ports.ubuntu.com/ubuntu-ports focal-updates/multiverse arm64 Packages [9395 B]
+#6 10.97 Get:10 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 Packages [2846 kB]
+#6 11.59 Get:11 http://ports.ubuntu.com/ubuntu-ports focal-updates/universe arm64 Packages [1340 kB]
+#6 12.05 Get:12 http://ports.ubuntu.com/ubuntu-ports focal-updates/restricted arm64 Packages [49.3 kB]
+#6 12.20 Get:13 http://ports.ubuntu.com/ubuntu-ports focal-backports/universe arm64 Packages [27.8 kB]
+#6 12.35 Get:14 http://ports.ubuntu.com/ubuntu-ports focal-backports/main arm64 Packages [54.8 kB]
+#6 14.65 Get:15 http://ports.ubuntu.com/ubuntu-ports focal-security/main arm64 Packages [2460 kB]
+#6 16.17 Get:16 http://ports.ubuntu.com/ubuntu-ports focal-security/multiverse arm64 Packages [3258 B]
+#6 16.33 Get:17 http://ports.ubuntu.com/ubuntu-ports focal-security/universe arm64 Packages [1043 kB]
+#6 16.61 Get:18 http://ports.ubuntu.com/ubuntu-ports focal-security/restricted arm64 Packages [49.0 kB]
+#6 17.40 Fetched 21.0 MB in 16s (1282 kB/s)
+#6 17.40 Reading package lists...
+#6 26.51 Building dependency tree...
+#6 27.84 Reading state information...
+#6 27.90 All packages are up to date.
+#6 DONE 28.0s
+
+#7 [downloader 3/6] RUN apt install -y unzip curl
+#7 sha256:95451ae91c1e66250f93496ab0a80dd6d2fc47ba0187682b33f9ee41d559152a
+#7 0.430 
+#7 0.431 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+#7 0.432 
+#7 1.056 Reading package lists...
+#7 10.23 Building dependency tree...
+#7 11.59 Reading state information...
+#7 12.77 The following additional packages will be installed:
+#7 12.77   ca-certificates krb5-locales libasn1-8-heimdal libbrotli1 libcurl4
+#7 12.77   libgssapi-krb5-2 libgssapi3-heimdal libhcrypto4-heimdal libheimbase1-heimdal
+#7 12.77   libheimntlm0-heimdal libhx509-5-heimdal libk5crypto3 libkeyutils1
+#7 12.77   libkrb5-26-heimdal libkrb5-3 libkrb5support0 libldap-2.4-2 libldap-common
+#7 12.77   libnghttp2-14 libpsl5 libroken18-heimdal librtmp1 libsasl2-2
+#7 12.77   libsasl2-modules libsasl2-modules-db libsqlite3-0 libssh-4 libssl1.1
+#7 12.78   libwind0-heimdal openssl publicsuffix
+#7 12.79 Suggested packages:
+#7 12.79   krb5-doc krb5-user libsasl2-modules-gssapi-mit
+#7 12.79   | libsasl2-modules-gssapi-heimdal libsasl2-modules-ldap libsasl2-modules-otp
+#7 12.79   libsasl2-modules-sql zip
+#7 13.47 The following NEW packages will be installed:
+#7 13.47   ca-certificates curl krb5-locales libasn1-8-heimdal libbrotli1 libcurl4
+#7 13.47   libgssapi-krb5-2 libgssapi3-heimdal libhcrypto4-heimdal libheimbase1-heimdal
+#7 13.47   libheimntlm0-heimdal libhx509-5-heimdal libk5crypto3 libkeyutils1
+#7 13.47   libkrb5-26-heimdal libkrb5-3 libkrb5support0 libldap-2.4-2 libldap-common
+#7 13.48   libnghttp2-14 libpsl5 libroken18-heimdal librtmp1 libsasl2-2
+#7 13.48   libsasl2-modules libsasl2-modules-db libsqlite3-0 libssh-4 libssl1.1
+#7 13.48   libwind0-heimdal openssl publicsuffix unzip
+#7 14.04 0 upgraded, 33 newly installed, 0 to remove and 0 not upgraded.
+#7 14.04 Need to get 5233 kB of archives.
+#7 14.04 After this operation, 16.4 MB of additional disk space will be used.
+#7 14.04 Get:1 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libssl1.1 arm64 1.1.1f-1ubuntu2.20 [1157 kB]
+#7 15.15 Get:2 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 openssl arm64 1.1.1f-1ubuntu2.20 [599 kB]
+#7 15.25 Get:3 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 ca-certificates all 20230311ubuntu0.20.04.1 [152 kB]
+#7 15.28 Get:4 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libsqlite3-0 arm64 3.31.1-4ubuntu0.6 [507 kB]
+#7 15.37 Get:5 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 krb5-locales all 1.17-6ubuntu4.4 [11.5 kB]
+#7 15.38 Get:6 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libkrb5support0 arm64 1.17-6ubuntu4.4 [30.5 kB]
+#7 15.39 Get:7 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libk5crypto3 arm64 1.17-6ubuntu4.4 [80.4 kB]
+#7 15.42 Get:8 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libkeyutils1 arm64 1.6-6ubuntu1.1 [10.1 kB]
+#7 15.43 Get:9 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libkrb5-3 arm64 1.17-6ubuntu4.4 [312 kB]
+#7 15.50 Get:10 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libgssapi-krb5-2 arm64 1.17-6ubuntu4.4 [113 kB]
+#7 15.51 Get:11 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libpsl5 arm64 0.21.0-1ubuntu1 [51.3 kB]
+#7 15.81 Get:12 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 publicsuffix all 20200303.0012-1 [111 kB]
+#7 16.42 Get:13 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libbrotli1 arm64 1.0.7-6ubuntu0.1 [257 kB]
+#7 16.68 Get:14 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libroken18-heimdal arm64 7.7.0+dfsg-1ubuntu1.4 [40.1 kB]
+#7 16.71 Get:15 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libasn1-8-heimdal arm64 7.7.0+dfsg-1ubuntu1.4 [150 kB]
+#7 16.78 Get:16 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libheimbase1-heimdal arm64 7.7.0+dfsg-1ubuntu1.4 [28.7 kB]
+#7 16.79 Get:17 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libhcrypto4-heimdal arm64 7.7.0+dfsg-1ubuntu1.4 [84.7 kB]
+#7 16.84 Get:18 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libwind0-heimdal arm64 7.7.0+dfsg-1ubuntu1.4 [47.5 kB]
+#7 16.86 Get:19 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libhx509-5-heimdal arm64 7.7.0+dfsg-1ubuntu1.4 [98.9 kB]
+#7 16.90 Get:20 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libkrb5-26-heimdal arm64 7.7.0+dfsg-1ubuntu1.4 [192 kB]
+#7 16.94 Get:21 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libheimntlm0-heimdal arm64 7.7.0+dfsg-1ubuntu1.4 [14.7 kB]
+#7 16.95 Get:22 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libgssapi3-heimdal arm64 7.7.0+dfsg-1ubuntu1.4 [88.4 kB]
+#7 17.26 Get:23 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libsasl2-modules-db arm64 2.1.27+dfsg-2ubuntu0.1 [14.9 kB]
+#7 17.57 Get:24 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libsasl2-2 arm64 2.1.27+dfsg-2ubuntu0.1 [48.4 kB]
+#7 17.77 Get:25 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libldap-common all 2.4.49+dfsg-2ubuntu1.9 [16.6 kB]
+#7 17.83 Get:26 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libldap-2.4-2 arm64 2.4.49+dfsg-2ubuntu1.9 [145 kB]
+#7 18.13 Get:27 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libnghttp2-14 arm64 1.40.0-1ubuntu0.2 [75.9 kB]
+#7 18.31 Get:28 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 librtmp1 arm64 2.4+20151223.gitfa8646d.1-2build1 [53.3 kB]
+#7 18.34 Get:29 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libssh-4 arm64 0.9.3-2ubuntu2.4 [160 kB]
+#7 18.65 Get:30 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libcurl4 arm64 7.68.0-1ubuntu2.21 [216 kB]
+#7 18.67 Get:31 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 curl arm64 7.68.0-1ubuntu2.21 [157 kB]
+#7 18.71 Get:32 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libsasl2-modules arm64 2.1.27+dfsg-2ubuntu0.1 [46.1 kB]
+#7 18.72 Get:33 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 unzip arm64 6.0-25ubuntu1.1 [162 kB]
+#7 20.28 debconf: delaying package configuration, since apt-utils is not installed
+#7 20.56 Fetched 5233 kB in 5s (992 kB/s)
+#7 20.84 Selecting previously unselected package libssl1.1:arm64.
+#7 20.84 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4117 files and directories currently installed.)
+#7 20.87 Preparing to unpack .../00-libssl1.1_1.1.1f-1ubuntu2.20_arm64.deb ...
+#7 20.88 Unpacking libssl1.1:arm64 (1.1.1f-1ubuntu2.20) ...
+#7 21.81 Selecting previously unselected package openssl.
+#7 21.81 Preparing to unpack .../01-openssl_1.1.1f-1ubuntu2.20_arm64.deb ...
+#7 21.82 Unpacking openssl (1.1.1f-1ubuntu2.20) ...
+#7 22.39 Selecting previously unselected package ca-certificates.
+#7 22.39 Preparing to unpack .../02-ca-certificates_20230311ubuntu0.20.04.1_all.deb ...
+#7 22.39 Unpacking ca-certificates (20230311ubuntu0.20.04.1) ...
+#7 22.75 Selecting previously unselected package libsqlite3-0:arm64.
+#7 22.75 Preparing to unpack .../03-libsqlite3-0_3.31.1-4ubuntu0.6_arm64.deb ...
+#7 22.75 Unpacking libsqlite3-0:arm64 (3.31.1-4ubuntu0.6) ...
+#7 23.36 Selecting previously unselected package krb5-locales.
+#7 23.36 Preparing to unpack .../04-krb5-locales_1.17-6ubuntu4.4_all.deb ...
+#7 23.37 Unpacking krb5-locales (1.17-6ubuntu4.4) ...
+#7 23.63 Selecting previously unselected package libkrb5support0:arm64.
+#7 23.63 Preparing to unpack .../05-libkrb5support0_1.17-6ubuntu4.4_arm64.deb ...
+#7 23.64 Unpacking libkrb5support0:arm64 (1.17-6ubuntu4.4) ...
+#7 23.91 Selecting previously unselected package libk5crypto3:arm64.
+#7 23.91 Preparing to unpack .../06-libk5crypto3_1.17-6ubuntu4.4_arm64.deb ...
+#7 23.92 Unpacking libk5crypto3:arm64 (1.17-6ubuntu4.4) ...
+#7 24.58 Selecting previously unselected package libkeyutils1:arm64.
+#7 24.58 Preparing to unpack .../07-libkeyutils1_1.6-6ubuntu1.1_arm64.deb ...
+#7 24.59 Unpacking libkeyutils1:arm64 (1.6-6ubuntu1.1) ...
+#7 24.90 Selecting previously unselected package libkrb5-3:arm64.
+#7 24.90 Preparing to unpack .../08-libkrb5-3_1.17-6ubuntu4.4_arm64.deb ...
+#7 24.90 Unpacking libkrb5-3:arm64 (1.17-6ubuntu4.4) ...
+#7 25.50 Selecting previously unselected package libgssapi-krb5-2:arm64.
+#7 25.50 Preparing to unpack .../09-libgssapi-krb5-2_1.17-6ubuntu4.4_arm64.deb ...
+#7 25.50 Unpacking libgssapi-krb5-2:arm64 (1.17-6ubuntu4.4) ...
+#7 25.90 Selecting previously unselected package libpsl5:arm64.
+#7 25.90 Preparing to unpack .../10-libpsl5_0.21.0-1ubuntu1_arm64.deb ...
+#7 25.90 Unpacking libpsl5:arm64 (0.21.0-1ubuntu1) ...
+#7 26.19 Selecting previously unselected package publicsuffix.
+#7 26.19 Preparing to unpack .../11-publicsuffix_20200303.0012-1_all.deb ...
+#7 26.20 Unpacking publicsuffix (20200303.0012-1) ...
+#7 28.29 Selecting previously unselected package libbrotli1:arm64.
+#7 28.29 Preparing to unpack .../12-libbrotli1_1.0.7-6ubuntu0.1_arm64.deb ...
+#7 28.30 Unpacking libbrotli1:arm64 (1.0.7-6ubuntu0.1) ...
+#7 28.72 Selecting previously unselected package libroken18-heimdal:arm64.
+#7 28.73 Preparing to unpack .../13-libroken18-heimdal_7.7.0+dfsg-1ubuntu1.4_arm64.deb ...
+#7 28.73 Unpacking libroken18-heimdal:arm64 (7.7.0+dfsg-1ubuntu1.4) ...
+#7 29.04 Selecting previously unselected package libasn1-8-heimdal:arm64.
+#7 29.04 Preparing to unpack .../14-libasn1-8-heimdal_7.7.0+dfsg-1ubuntu1.4_arm64.deb ...
+#7 29.05 Unpacking libasn1-8-heimdal:arm64 (7.7.0+dfsg-1ubuntu1.4) ...
+#7 29.42 Selecting previously unselected package libheimbase1-heimdal:arm64.
+#7 29.43 Preparing to unpack .../15-libheimbase1-heimdal_7.7.0+dfsg-1ubuntu1.4_arm64.deb ...
+#7 29.43 Unpacking libheimbase1-heimdal:arm64 (7.7.0+dfsg-1ubuntu1.4) ...
+#7 29.71 Selecting previously unselected package libhcrypto4-heimdal:arm64.
+#7 29.71 Preparing to unpack .../16-libhcrypto4-heimdal_7.7.0+dfsg-1ubuntu1.4_arm64.deb ...
+#7 29.71 Unpacking libhcrypto4-heimdal:arm64 (7.7.0+dfsg-1ubuntu1.4) ...
+#7 30.04 Selecting previously unselected package libwind0-heimdal:arm64.
+#7 30.04 Preparing to unpack .../17-libwind0-heimdal_7.7.0+dfsg-1ubuntu1.4_arm64.deb ...
+#7 30.04 Unpacking libwind0-heimdal:arm64 (7.7.0+dfsg-1ubuntu1.4) ...
+#7 30.35 Selecting previously unselected package libhx509-5-heimdal:arm64.
+#7 30.35 Preparing to unpack .../18-libhx509-5-heimdal_7.7.0+dfsg-1ubuntu1.4_arm64.deb ...
+#7 30.36 Unpacking libhx509-5-heimdal:arm64 (7.7.0+dfsg-1ubuntu1.4) ...
+#7 30.66 Selecting previously unselected package libkrb5-26-heimdal:arm64.
+#7 30.66 Preparing to unpack .../19-libkrb5-26-heimdal_7.7.0+dfsg-1ubuntu1.4_arm64.deb ...
+#7 30.66 Unpacking libkrb5-26-heimdal:arm64 (7.7.0+dfsg-1ubuntu1.4) ...
+#7 31.04 Selecting previously unselected package libheimntlm0-heimdal:arm64.
+#7 31.04 Preparing to unpack .../20-libheimntlm0-heimdal_7.7.0+dfsg-1ubuntu1.4_arm64.deb ...
+#7 31.05 Unpacking libheimntlm0-heimdal:arm64 (7.7.0+dfsg-1ubuntu1.4) ...
+#7 31.33 Selecting previously unselected package libgssapi3-heimdal:arm64.
+#7 31.33 Preparing to unpack .../21-libgssapi3-heimdal_7.7.0+dfsg-1ubuntu1.4_arm64.deb ...
+#7 31.33 Unpacking libgssapi3-heimdal:arm64 (7.7.0+dfsg-1ubuntu1.4) ...
+#7 31.64 Selecting previously unselected package libsasl2-modules-db:arm64.
+#7 31.65 Preparing to unpack .../22-libsasl2-modules-db_2.1.27+dfsg-2ubuntu0.1_arm64.deb ...
+#7 31.65 Unpacking libsasl2-modules-db:arm64 (2.1.27+dfsg-2ubuntu0.1) ...
+#7 31.90 Selecting previously unselected package libsasl2-2:arm64.
+#7 31.91 Preparing to unpack .../23-libsasl2-2_2.1.27+dfsg-2ubuntu0.1_arm64.deb ...
+#7 31.91 Unpacking libsasl2-2:arm64 (2.1.27+dfsg-2ubuntu0.1) ...
+#7 32.19 Selecting previously unselected package libldap-common.
+#7 32.19 Preparing to unpack .../24-libldap-common_2.4.49+dfsg-2ubuntu1.9_all.deb ...
+#7 32.20 Unpacking libldap-common (2.4.49+dfsg-2ubuntu1.9) ...
+#7 32.47 Selecting previously unselected package libldap-2.4-2:arm64.
+#7 32.47 Preparing to unpack .../25-libldap-2.4-2_2.4.49+dfsg-2ubuntu1.9_arm64.deb ...
+#7 32.47 Unpacking libldap-2.4-2:arm64 (2.4.49+dfsg-2ubuntu1.9) ...
+#7 32.85 Selecting previously unselected package libnghttp2-14:arm64.
+#7 32.85 Preparing to unpack .../26-libnghttp2-14_1.40.0-1ubuntu0.2_arm64.deb ...
+#7 32.86 Unpacking libnghttp2-14:arm64 (1.40.0-1ubuntu0.2) ...
+#7 33.17 Selecting previously unselected package librtmp1:arm64.
+#7 33.17 Preparing to unpack .../27-librtmp1_2.4+20151223.gitfa8646d.1-2build1_arm64.deb ...
+#7 33.17 Unpacking librtmp1:arm64 (2.4+20151223.gitfa8646d.1-2build1) ...
+#7 33.46 Selecting previously unselected package libssh-4:arm64.
+#7 33.46 Preparing to unpack .../28-libssh-4_0.9.3-2ubuntu2.4_arm64.deb ...
+#7 33.47 Unpacking libssh-4:arm64 (0.9.3-2ubuntu2.4) ...
+#7 33.83 Selecting previously unselected package libcurl4:arm64.
+#7 33.83 Preparing to unpack .../29-libcurl4_7.68.0-1ubuntu2.21_arm64.deb ...
+#7 33.84 Unpacking libcurl4:arm64 (7.68.0-1ubuntu2.21) ...
+#7 34.27 Selecting previously unselected package curl.
+#7 34.27 Preparing to unpack .../30-curl_7.68.0-1ubuntu2.21_arm64.deb ...
+#7 34.27 Unpacking curl (7.68.0-1ubuntu2.21) ...
+#7 34.71 Selecting previously unselected package libsasl2-modules:arm64.
+#7 34.71 Preparing to unpack .../31-libsasl2-modules_2.1.27+dfsg-2ubuntu0.1_arm64.deb ...
+#7 34.72 Unpacking libsasl2-modules:arm64 (2.1.27+dfsg-2ubuntu0.1) ...
+#7 35.05 Selecting previously unselected package unzip.
+#7 35.05 Preparing to unpack .../32-unzip_6.0-25ubuntu1.1_arm64.deb ...
+#7 35.06 Unpacking unzip (6.0-25ubuntu1.1) ...
+#7 35.50 Setting up libkeyutils1:arm64 (1.6-6ubuntu1.1) ...
+#7 35.52 Setting up libpsl5:arm64 (0.21.0-1ubuntu1) ...
+#7 35.53 Setting up libssl1.1:arm64 (1.1.1f-1ubuntu2.20) ...
+#7 36.78 debconf: unable to initialize frontend: Dialog
+#7 36.78 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#7 36.78 debconf: falling back to frontend: Readline
+#7 36.78 debconf: unable to initialize frontend: Readline
+#7 36.78 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/aarch64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0 /usr/lib/aarch64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/aarch64-linux-gnu/perl/5.30 /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/aarch64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+#7 36.78 debconf: falling back to frontend: Teletype
+#7 37.17 Setting up unzip (6.0-25ubuntu1.1) ...
+#7 37.30 Setting up libbrotli1:arm64 (1.0.7-6ubuntu0.1) ...
+#7 37.31 Setting up libsqlite3-0:arm64 (3.31.1-4ubuntu0.6) ...
+#7 37.32 Setting up libsasl2-modules:arm64 (2.1.27+dfsg-2ubuntu0.1) ...
+#7 37.43 Setting up libnghttp2-14:arm64 (1.40.0-1ubuntu0.2) ...
+#7 37.44 Setting up krb5-locales (1.17-6ubuntu4.4) ...
+#7 37.45 Setting up libldap-common (2.4.49+dfsg-2ubuntu1.9) ...
+#7 37.47 Setting up libkrb5support0:arm64 (1.17-6ubuntu4.4) ...
+#7 37.48 Setting up libsasl2-modules-db:arm64 (2.1.27+dfsg-2ubuntu0.1) ...
+#7 37.48 Setting up librtmp1:arm64 (2.4+20151223.gitfa8646d.1-2build1) ...
+#7 37.50 Setting up libk5crypto3:arm64 (1.17-6ubuntu4.4) ...
+#7 37.51 Setting up libsasl2-2:arm64 (2.1.27+dfsg-2ubuntu0.1) ...
+#7 37.52 Setting up libroken18-heimdal:arm64 (7.7.0+dfsg-1ubuntu1.4) ...
+#7 37.53 Setting up libkrb5-3:arm64 (1.17-6ubuntu4.4) ...
+#7 37.54 Setting up openssl (1.1.1f-1ubuntu2.20) ...
+#7 37.59 Setting up publicsuffix (20200303.0012-1) ...
+#7 37.60 Setting up libheimbase1-heimdal:arm64 (7.7.0+dfsg-1ubuntu1.4) ...
+#7 37.61 Setting up libasn1-8-heimdal:arm64 (7.7.0+dfsg-1ubuntu1.4) ...
+#7 37.62 Setting up libhcrypto4-heimdal:arm64 (7.7.0+dfsg-1ubuntu1.4) ...
+#7 37.63 Setting up ca-certificates (20230311ubuntu0.20.04.1) ...
+#7 39.07 debconf: unable to initialize frontend: Dialog
+#7 39.07 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#7 39.07 debconf: falling back to frontend: Readline
+#7 39.07 debconf: unable to initialize frontend: Readline
+#7 39.07 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/aarch64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0 /usr/lib/aarch64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/aarch64-linux-gnu/perl/5.30 /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/aarch64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+#7 39.07 debconf: falling back to frontend: Teletype
+#7 55.45 Updating certificates in /etc/ssl/certs...
+#7 78.25 137 added, 0 removed; done.
+#7 78.47 Setting up libwind0-heimdal:arm64 (7.7.0+dfsg-1ubuntu1.4) ...
+#7 78.48 Setting up libgssapi-krb5-2:arm64 (1.17-6ubuntu4.4) ...
+#7 78.53 Setting up libssh-4:arm64 (0.9.3-2ubuntu2.4) ...
+#7 78.55 Setting up libhx509-5-heimdal:arm64 (7.7.0+dfsg-1ubuntu1.4) ...
+#7 78.56 Setting up libkrb5-26-heimdal:arm64 (7.7.0+dfsg-1ubuntu1.4) ...
+#7 78.57 Setting up libheimntlm0-heimdal:arm64 (7.7.0+dfsg-1ubuntu1.4) ...
+#7 78.58 Setting up libgssapi3-heimdal:arm64 (7.7.0+dfsg-1ubuntu1.4) ...
+#7 78.59 Setting up libldap-2.4-2:arm64 (2.4.49+dfsg-2ubuntu1.9) ...
+#7 78.60 Setting up libcurl4:arm64 (7.68.0-1ubuntu2.21) ...
+#7 78.61 Setting up curl (7.68.0-1ubuntu2.21) ...
+#7 78.62 Processing triggers for libc-bin (2.31-0ubuntu9.14) ...
+#7 78.81 Processing triggers for ca-certificates (20230311ubuntu0.20.04.1) ...
+#7 79.12 Updating certificates in /etc/ssl/certs...
+#7 98.22 0 added, 0 removed; done.
+#7 98.22 Running hooks in /etc/ca-certificates/update.d...
+#7 98.27 done.
+#7 DONE 98.6s
+
+#8 [downloader 4/6] RUN curl -Lsf https://github.com/LukeChannings/deno-arm64/releases/download/v1.39.2/deno-$(echo linux/arm64 | tr '/' '-').zip -o ./deno.zip
+#8 sha256:d27765d1d0759e49f46c30a498cdc4c0cc14637f4626841e423eacf59404131f
+#8 DONE 12.8s
+
+#9 [downloader 5/6] RUN pwd
+#9 sha256:6ff49a2c0259461a0967d439be7b23cb39c3104adeda4c2dd87b94b3c3bf4a27
+#9 0.583 /
+#9 DONE 0.6s
+
+#10 [downloader 6/6] RUN unzip ./deno.zip && rm ./deno.zip
+#10 sha256:0b126ecef3d14a4266dfaf5e04c112cc837655cb0cd07aada477b017202e274c
+#10 0.375 Archive:  ./deno.zip
+#10 0.383   inflating: deno                    
+#10 DONE 3.4s
+
+#11 [stage-1  2/10] COPY --from=downloader /deno /bin/deno
+#11 sha256:797de1a51deda755823523ff8dd25f5841a4b8162c9c75e74fe6fe6ece763af3
+#11 DONE 0.4s
+
+#12 [stage-1  3/10] RUN chmod 755 /bin/deno
+#12 sha256:c09e70d3920cb21eabf81710485c67b425bcebb93e64d6975f05492c8ed815b1
+#12 DONE 6.5s
+
+#13 [stage-1  4/10] RUN addgroup --gid 1993 deno
+#13 sha256:a52b54c9b11f7582b71d34fae9e322ec8d804552f7b98088f86c9be595d608e7
+#13 1.427 Adding group `deno' (GID 1993) ...
+#13 1.555 Done.
+#13 DONE 1.6s
+
+#14 [stage-1  5/10] RUN adduser --uid 1993 --gid 1993 deno
+#14 sha256:afa3511db8881f2b06812f920638ae847f80b64f7407b41b6f82af7f1010fe39
+#14 0.908 Adding user `deno' ...
+#14 0.908 Adding new user `deno' (1993) with group `deno' ...
+#14 1.165 Creating home directory `/home/deno' ...
+#14 1.210 Copying files from `/etc/skel' ...
+#14 1.445 New password: Password change aborted.
+#14 1.452 passwd: Authentication token manipulation error
+#14 1.453 passwd: password unchanged
+#14 1.467 Use of uninitialized value $answer in chop at /usr/sbin/adduser line 591.
+#14 1.468 Use of uninitialized value $answer in pattern match (m//) at /usr/sbin/adduser line 592.
+#14 1.476 Try again? [y/N] Changing the user information for deno
+#14 1.880 Enter the new value, or press ENTER for the default
+#14 1.880 	Full Name []: 	Room Number []: 	Work Phone []: 	Home Phone []: 	Other []: Use of uninitialized value $answer in chop at /usr/sbin/adduser line 621.
+#14 2.034 Use of uninitialized value $answer in pattern match (m//) at /usr/sbin/adduser line 622.
+#14 2.036 Is the information correct? [Y/n] #14 DONE 2.1s
+
+#15 [stage-1  6/10] RUN mkdir /deno-dir/
+#15 sha256:af444c706095e769bc8dee89224685065ed64e526373c6d2a718211caf58ae86
+#15 DONE 0.4s
+
+#16 [stage-1  7/10] RUN chown deno:deno /deno-dir/
+#16 sha256:30a7f5ded6a8647135ee4ef1749651497aea763b5941a020290bad3aeeee2f99
+#16 DONE 0.4s
+
+#17 [stage-1  8/10] RUN deno upgrade --version 1.39.2
+#17 sha256:01849440a4d5f051b09fdc06e437483e800f7b33431500e2c1468847331b2648
+#17 0.584 Version 1.39.2 is already installed
+#17 DONE 0.6s
+
+#19 [stage-1  9/10] COPY . .
+#19 sha256:91ee8fe19547368a94a7eac7c83effd220d78b4c6ccafb0c3fc225448a0d105a
+#19 DONE 1.8s
+
+#20 [stage-1 10/10] RUN deno cache main.ts
+#20 sha256:1c09e93e54f8e7a2c3715c5d60797ec80cd030e11717eae475c5806b3cf624e0
+#20 0.944 [0m[32mDownload[0m https://deno.land/x/fresh@1.1.5/server.ts
+#20 1.039 [0m[32mDownload[0m https://deno.land/x/fresh@1.1.5/plugins/twind.ts
+#20 1.511 [0m[32mDownload[0m https://deno.land/x/fresh@1.1.5/src/server/mod.ts
+#20 1.514 [0m[32mDownload[0m https://esm.sh/twind@0.16.19/sheets
+#20 1.515 [0m[32mDownload[0m https://deno.land/x/fresh@1.1.5/plugins/twind/shared.ts
+#20 1.516 [0m[32mDownload[0m https://esm.sh/@twind/typography@0.0.2
+#20 1.922 [0m[32mDownload[0m https://deno.land/x/fresh@1.1.5/src/server/context.ts
+#20 1.923 [0m[32mDownload[0m https://deno.land/x/fresh@1.1.5/src/server/deps.ts
+#20 1.924 [0m[32mDownload[0m https://deno.land/x/fresh@1.1.5/src/server/types.ts
+#20 1.925 [0m[32mDownload[0m https://deno.land/x/fresh@1.1.5/src/server/render.ts
+#20 1.926 [0m[32mDownload[0m https://esm.sh/preact@10.13.1/jsx-runtime
+#20 1.930 [0m[32mDownload[0m https://deno.land/x/markdown_moon@0.0.2/mod.ts
+#20 1.931 [0m[32mDownload[0m https://esm.sh/preact@10.13.1/hooks
+#20 1.933 [0m[32mDownload[0m https://deno.land/x/fresh@1.1.5/runtime.ts
+#20 1.938 [0m[32mDownload[0m https://esm.sh/three@0.143.0
+#20 1.940 [0m[32mDownload[0m https://esm.sh/three@0.143.0/examples/jsm/controls/OrbitControls
+#20 1.941 [0m[32mDownload[0m https://esm.sh/twind@0.16.19
+#20 2.240 [0m[32mDownload[0m https://esm.sh/v135/twind@0.16.19/denonext/sheets.js
+#20 2.241 [0m[32mDownload[0m https://esm.sh/v135/twind@0.16.19/sheets/sheets.d.ts
+#20 2.242 [0m[32mDownload[0m https://esm.sh/preact@10.13.1
+#20 2.243 [0m[32mDownload[0m https://esm.sh/v135/@twind/typography@0.0.2/denonext/typography.mjs
+#20 2.243 [0m[32mDownload[0m https://esm.sh/v135/@twind/typography@0.0.2/typography.d.ts
+#20 2.662 [0m[32mDownload[0m https://deno.land/x/fresh@1.1.5/src/server/bundle.ts
+#20 2.663 [0m[32mDownload[0m https://deno.land/x/fresh@1.1.5/src/server/constants.ts
+#20 2.664 [0m[32mDownload[0m https://deno.land/x/fresh@1.1.5/src/server/default_error_page.ts
+#20 2.665 [0m[32mDownload[0m https://deno.land/x/fresh@1.1.5/src/runtime/csp.ts
+#20 2.666 [0m[32mDownload[0m https://deno.land/x/fresh@1.1.5/src/runtime/utils.ts
+#20 2.667 [0m[32mDownload[0m https://deno.land/std@0.178.0/path/mod.ts
+#20 2.667 [0m[32mDownload[0m https://deno.land/std@0.178.0/fs/walk.ts
+#20 2.668 [0m[32mDownload[0m https://deno.land/std@0.178.0/http/server.ts
+#20 2.670 [0m[32mDownload[0m https://deno.land/std@0.178.0/http/http_status.ts
+#20 2.670 [0m[32mDownload[0m https://deno.land/std@0.178.0/media_types/mod.ts
+#20 2.671 [0m[32mDownload[0m https://deno.land/x/rutt@0.1.0/mod.ts
+#20 2.673 [0m[32mDownload[0m https://deno.land/x/esbuild@v0.17.11/wasm.js
+#20 2.674 [0m[32mDownload[0m https://deno.land/x/esbuild@v0.17.11/mod.d.ts
+#20 2.676 [0m[32mDownload[0m https://deno.land/x/esbuild@v0.17.11/mod.js
+#20 2.678 [0m[32mDownload[0m https://raw.githubusercontent.com/lucacasonato/esbuild_deno_loader/8031f71afa1bbcd3237a94b11f53a2e5c5c0e7bf/mod.ts
+#20 2.680 [0m[32mDownload[0m https://esm.sh/*preact-render-to-string@5.2.6
+#20 2.681 [0m[32mDownload[0m https://deno.land/x/fresh@1.1.5/src/runtime/head.ts
+#20 2.683 [0m[32mDownload[0m https://deno.land/x/fresh@1.1.5/src/server/htmlescape.ts
+#20 2.684 [0m[32mDownload[0m https://esm.sh/stable/preact@10.13.1/denonext/preact.mjs
+#20 2.685 [0m[32mDownload[0m https://esm.sh/stable/preact@10.13.1/denonext/jsx-runtime.js
+#20 2.687 [0m[32mDownload[0m https://esm.sh/v128/preact@10.13.1/jsx-runtime/src/index.d.ts
+#20 2.688 [0m[32mDownload[0m https://deno.land/x/markdown_moon@0.0.2/src/block-lexer.ts
+#20 2.689 [0m[32mDownload[0m https://deno.land/x/markdown_moon@0.0.2/src/helpers.ts
+#20 2.690 [0m[32mDownload[0m https://deno.land/x/markdown_moon@0.0.2/src/inline-lexer.ts
+#20 2.691 [0m[32mDownload[0m https://deno.land/x/markdown_moon@0.0.2/src/interfaces.ts
+#20 2.692 [0m[32mDownload[0m https://deno.land/x/markdown_moon@0.0.2/src/marked.ts
+#20 2.693 [0m[32mDownload[0m https://deno.land/x/markdown_moon@0.0.2/src/parser.ts
+#20 2.694 [0m[32mDownload[0m https://deno.land/x/markdown_moon@0.0.2/src/renderer.ts
+#20 2.696 [0m[32mDownload[0m https://deno.land/x/markdown_moon@0.0.2/src/extend-regexp.ts
+#20 2.697 [0m[32mDownload[0m https://esm.sh/stable/preact@10.13.1/denonext/hooks.js
+#20 2.698 [0m[32mDownload[0m https://esm.sh/v128/preact@10.13.1/hooks/src/index.d.ts
+#20 2.699 [0m[32mDownload[0m https://esm.sh/v135/three@0.143.0/denonext/three.mjs
+#20 2.700 [0m[32mDownload[0m https://esm.sh/v135/@types/three@~0.143/index.d.ts
+#20 2.701 [0m[32mDownload[0m https://esm.sh/v135/three@0.143.0/denonext/examples/jsm/controls/OrbitControls.js
+#20 2.701 [0m[32mDownload[0m https://esm.sh/v135/@types/three@~0.143/examples/jsm/controls/OrbitControls~.d.ts
+#20 2.703 [0m[32mDownload[0m https://esm.sh/v135/style-vendorizer@2.2.3/denonext/style-vendorizer.mjs
+#20 2.704 [0m[32mDownload[0m https://esm.sh/v135/twind@0.16.19/denonext/twind.mjs
+#20 2.705 [0m[32mDownload[0m https://esm.sh/v135/twind@0.16.19/twind.d.ts
+#20 2.981 [0m[32mDownload[0m https://esm.sh/v128/preact@10.13.1/src/index.d.ts
+#20 3.229 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/examples/jsm/controls/OrbitControls~.d.ts
+#20 3.235 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/index.d.ts
+#20 4.415 [0m[32mDownload[0m https://deno.land/std@0.178.0/_util/os.ts
+#20 4.417 [0m[32mDownload[0m https://deno.land/std@0.178.0/path/win32.ts
+#20 4.417 [0m[32mDownload[0m https://deno.land/std@0.178.0/path/posix.ts
+#20 4.418 [0m[32mDownload[0m https://deno.land/std@0.178.0/path/common.ts
+#20 4.419 [0m[32mDownload[0m https://deno.land/std@0.178.0/path/separator.ts
+#20 4.420 [0m[32mDownload[0m https://deno.land/std@0.178.0/path/_interface.ts
+#20 4.420 [0m[32mDownload[0m https://deno.land/std@0.178.0/path/glob.ts
+#20 4.421 [0m[32mDownload[0m https://deno.land/std@0.178.0/_util/asserts.ts
+#20 4.422 [0m[32mDownload[0m https://deno.land/std@0.178.0/fs/_util.ts
+#20 4.423 [0m[32mDownload[0m https://deno.land/std@0.178.0/async/mod.ts
+#20 4.424 [0m[32mDownload[0m https://deno.land/std@0.178.0/media_types/content_type.ts
+#20 4.426 [0m[32mDownload[0m https://deno.land/std@0.178.0/media_types/extension.ts
+#20 4.428 [0m[32mDownload[0m https://deno.land/std@0.178.0/media_types/extensions_by_type.ts
+#20 4.429 [0m[32mDownload[0m https://deno.land/std@0.178.0/media_types/format_media_type.ts
+#20 4.430 [0m[32mDownload[0m https://deno.land/std@0.178.0/media_types/get_charset.ts
+#20 4.430 [0m[32mDownload[0m https://deno.land/std@0.178.0/media_types/parse_media_type.ts
+#20 4.431 [0m[32mDownload[0m https://deno.land/std@0.178.0/media_types/type_by_extension.ts
+#20 4.432 [0m[32mDownload[0m https://deno.land/std@0.177.0/http/server.ts
+#20 4.433 [0m[32mDownload[0m https://deno.land/x/esbuild@v0.17.11/wasm.d.ts
+#20 4.434 [0m[32mDownload[0m https://deno.land/x/denoflate@1.2.1/mod.ts
+#20 9.684 [0m[32mDownload[0m https://raw.githubusercontent.com/lucacasonato/esbuild_deno_loader/8031f71afa1bbcd3237a94b11f53a2e5c5c0e7bf/deps.ts
+#20 9.686 [0m[32mDownload[0m https://raw.githubusercontent.com/lucacasonato/esbuild_deno_loader/8031f71afa1bbcd3237a94b11f53a2e5c5c0e7bf/src/native_loader.ts
+#20 9.687 [0m[32mDownload[0m https://raw.githubusercontent.com/lucacasonato/esbuild_deno_loader/8031f71afa1bbcd3237a94b11f53a2e5c5c0e7bf/src/portable_loader.ts
+#20 9.689 [0m[32mDownload[0m https://raw.githubusercontent.com/lucacasonato/esbuild_deno_loader/8031f71afa1bbcd3237a94b11f53a2e5c5c0e7bf/src/shared.ts
+#20 9.691 [0m[32mDownload[0m https://esm.sh/v135/preact-render-to-string@5.2.6/X-ZS8q/denonext/preact-render-to-string.mjs
+#20 9.693 [0m[32mDownload[0m https://esm.sh/v135/preact-render-to-string@5.2.6/X-ZS8q/src/index.d.ts
+#20 9.693 [0m[32mDownload[0m https://esm.sh/v128/preact@10.13.1/src/jsx.d.ts
+#20 9.695 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/_loader/loader.ts
+#20 11.01 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/Three.d.ts
+#20 11.01 [0m[32mDownload[0m https://esm.sh/v135/csstype@3.1.2/index.d.ts
+#20 11.01 [0m[32mDownload[0m https://deno.land/std@0.178.0/path/_constants.ts
+#20 11.01 [0m[32mDownload[0m https://deno.land/std@0.178.0/path/_util.ts
+#20 11.02 [0m[32mDownload[0m https://deno.land/std@0.178.0/async/abortable.ts
+#20 11.02 [0m[32mDownload[0m https://deno.land/std@0.178.0/async/deadline.ts
+#20 11.02 [0m[32mDownload[0m https://deno.land/std@0.178.0/async/debounce.ts
+#20 11.02 [0m[32mDownload[0m https://deno.land/std@0.178.0/async/deferred.ts
+#20 11.02 [0m[32mDownload[0m https://deno.land/std@0.178.0/async/delay.ts
+#20 11.02 [0m[32mDownload[0m https://deno.land/std@0.178.0/async/mux_async_iterator.ts
+#20 11.03 [0m[32mDownload[0m https://deno.land/std@0.178.0/async/pool.ts
+#20 11.03 [0m[32mDownload[0m https://deno.land/std@0.178.0/async/tee.ts
+#20 11.03 [0m[32mDownload[0m https://deno.land/std@0.178.0/async/retry.ts
+#20 11.03 [0m[32mDownload[0m https://deno.land/std@0.178.0/media_types/_db.ts
+#20 11.03 [0m[32mDownload[0m https://deno.land/std@0.178.0/media_types/_util.ts
+#20 11.03 [0m[32mDownload[0m https://deno.land/std@0.177.0/async/mod.ts
+#20 11.03 [0m[32mDownload[0m https://deno.land/x/denoflate@1.2.1/pkg/denoflate.js
+#20 11.03 [0m[32mDownload[0m https://deno.land/x/denoflate@1.2.1/pkg/denoflate_bg.wasm.js
+#20 11.78 [0m[32mDownload[0m https://deno.land/std@0.173.0/path/mod.ts
+#20 11.78 [0m[32mDownload[0m https://deno.land/x/importmap@0.2.1/mod.ts
+#20 11.78 [0m[32mDownload[0m https://raw.githubusercontent.com/lucacasonato/esbuild_deno_loader/8031f71afa1bbcd3237a94b11f53a2e5c5c0e7bf/src/deno.ts
+#20 11.78 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/_error.ts
+#20 11.79 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/_mark.ts
+#20 11.79 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/type.ts
+#20 11.79 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/_utils.ts
+#20 11.79 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/_loader/loader_state.ts
+#20 19.80 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/constants.d.ts
+#20 19.80 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/Three.Legacy.d.ts
+#20 19.80 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/utils.d.ts
+#20 19.80 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/animation/tracks/VectorKeyframeTrack.d.ts
+#20 19.80 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/animation/tracks/StringKeyframeTrack.d.ts
+#20 19.80 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/animation/tracks/QuaternionKeyframeTrack.d.ts
+#20 19.80 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/animation/tracks/NumberKeyframeTrack.d.ts
+#20 19.80 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/animation/tracks/ColorKeyframeTrack.d.ts
+#20 19.81 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/animation/tracks/BooleanKeyframeTrack.d.ts
+#20 19.81 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/animation/PropertyMixer.d.ts
+#20 19.81 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/animation/PropertyBinding.d.ts
+#20 19.81 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/animation/KeyframeTrack.d.ts
+#20 19.81 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/animation/AnimationUtils.d.ts
+#20 19.81 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/animation/AnimationObjectGroup.d.ts
+#20 19.81 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/animation/AnimationMixer.d.ts
+#20 19.81 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/animation/AnimationClip.d.ts
+#20 19.81 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/animation/AnimationAction.d.ts
+#20 19.81 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/audio/AudioListener.d.ts
+#20 19.81 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/audio/PositionalAudio.d.ts
+#20 19.81 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/audio/AudioContext.d.ts
+#20 19.82 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/audio/AudioAnalyser.d.ts
+#20 19.82 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/audio/Audio.d.ts
+#20 19.82 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/cameras/StereoCamera.d.ts
+#20 19.82 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/cameras/PerspectiveCamera.d.ts
+#20 19.82 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/cameras/OrthographicCamera.d.ts
+#20 19.82 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/cameras/CubeCamera.d.ts
+#20 19.82 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/cameras/ArrayCamera.d.ts
+#20 19.82 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/cameras/Camera.d.ts
+#20 19.82 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/core/Uniform.d.ts
+#20 19.82 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/core/UniformsGroup.d.ts
+#20 19.82 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/core/InstancedBufferGeometry.d.ts
+#20 19.82 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/core/BufferGeometry.d.ts
+#20 19.82 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/core/InterleavedBufferAttribute.d.ts
+#20 19.82 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/core/InstancedInterleavedBuffer.d.ts
+#20 19.83 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/core/InterleavedBuffer.d.ts
+#20 19.83 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/core/InstancedBufferAttribute.d.ts
+#20 19.83 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/core/GLBufferAttribute.d.ts
+#20 19.83 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/core/BufferAttribute.d.ts
+#20 19.83 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/core/Object3D.d.ts
+#20 19.83 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/core/Raycaster.d.ts
+#20 19.83 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/core/Layers.d.ts
+#20 19.83 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/core/EventDispatcher.d.ts
+#20 19.83 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/core/Clock.d.ts
+#20 19.83 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/extras/curves/Curves.d.ts
+#20 19.83 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/extras/core/Shape.d.ts
+#20 19.84 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/extras/core/Path.d.ts
+#20 19.84 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/extras/core/ShapePath.d.ts
+#20 19.84 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/extras/core/CurvePath.d.ts
+#20 19.84 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/extras/core/Curve.d.ts
+#20 19.84 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/extras/DataUtils.d.ts
+#20 19.84 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/extras/Earcut.d.ts
+#20 19.84 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/extras/ImageUtils.d.ts
+#20 19.84 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/extras/ShapeUtils.d.ts
+#20 19.84 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/extras/PMREMGenerator.d.ts
+#20 19.84 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/geometries/Geometries.d.ts
+#20 19.84 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/helpers/SpotLightHelper.d.ts
+#20 19.84 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/helpers/SkeletonHelper.d.ts
+#20 19.84 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/helpers/PointLightHelper.d.ts
+#20 19.85 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/helpers/HemisphereLightHelper.d.ts
+#20 19.85 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/helpers/GridHelper.d.ts
+#20 19.85 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/helpers/PolarGridHelper.d.ts
+#20 19.85 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/helpers/DirectionalLightHelper.d.ts
+#20 19.85 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/helpers/CameraHelper.d.ts
+#20 19.85 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/helpers/BoxHelper.d.ts
+#20 19.85 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/helpers/Box3Helper.d.ts
+#20 19.85 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/helpers/PlaneHelper.d.ts
+#20 19.85 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/helpers/ArrowHelper.d.ts
+#20 19.85 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/helpers/AxesHelper.d.ts
+#20 19.85 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/lights/SpotLightShadow.d.ts
+#20 19.85 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/lights/SpotLight.d.ts
+#20 19.86 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/lights/PointLight.d.ts
+#20 19.86 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/lights/PointLightShadow.d.ts
+#20 19.86 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/lights/RectAreaLight.d.ts
+#20 19.86 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/lights/HemisphereLight.d.ts
+#20 19.86 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/lights/DirectionalLightShadow.d.ts
+#20 19.86 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/lights/DirectionalLight.d.ts
+#20 19.86 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/lights/AmbientLight.d.ts
+#20 19.86 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/lights/LightShadow.d.ts
+#20 19.86 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/lights/Light.d.ts
+#20 19.86 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/lights/AmbientLightProbe.d.ts
+#20 19.87 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/lights/HemisphereLightProbe.d.ts
+#20 19.87 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/lights/LightProbe.d.ts
+#20 19.87 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/loaders/AnimationLoader.d.ts
+#20 19.87 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/loaders/CompressedTextureLoader.d.ts
+#20 19.87 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/loaders/DataTextureLoader.d.ts
+#20 19.87 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/loaders/CubeTextureLoader.d.ts
+#20 19.87 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/loaders/TextureLoader.d.ts
+#20 19.87 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/loaders/ObjectLoader.d.ts
+#20 19.87 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/loaders/MaterialLoader.d.ts
+#20 19.87 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/loaders/BufferGeometryLoader.d.ts
+#20 19.87 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/loaders/LoadingManager.d.ts
+#20 19.88 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/loaders/ImageLoader.d.ts
+#20 19.88 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/loaders/ImageBitmapLoader.d.ts
+#20 19.88 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/loaders/FileLoader.d.ts
+#20 19.88 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/loaders/Loader.d.ts
+#20 19.88 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/loaders/LoaderUtils.d.ts
+#20 19.88 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/loaders/Cache.d.ts
+#20 19.88 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/loaders/AudioLoader.d.ts
+#20 19.88 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/materials/Materials.d.ts
+#20 19.88 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/math/interpolants/QuaternionLinearInterpolant.d.ts
+#20 19.88 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/math/interpolants/LinearInterpolant.d.ts
+#20 19.89 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/math/interpolants/DiscreteInterpolant.d.ts
+#20 19.89 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/math/interpolants/CubicInterpolant.d.ts
+#20 19.89 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/math/Interpolant.d.ts
+#20 19.89 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/math/Triangle.d.ts
+#20 19.89 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/math/Spherical.d.ts
+#20 19.89 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/math/Cylindrical.d.ts
+#20 19.89 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/math/Plane.d.ts
+#20 19.89 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/math/Frustum.d.ts
+#20 19.89 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/math/Sphere.d.ts
+#20 19.90 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/math/Ray.d.ts
+#20 19.90 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/math/Matrix4.d.ts
+#20 19.90 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/math/Matrix3.d.ts
+#20 19.90 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/math/Box3.d.ts
+#20 19.90 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/math/Box2.d.ts
+#20 19.90 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/math/Line3.d.ts
+#20 19.90 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/math/Euler.d.ts
+#20 19.90 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/math/Vector4.d.ts
+#20 19.90 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/math/Vector3.d.ts
+#20 19.90 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/math/Vector2.d.ts
+#20 19.91 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/math/Quaternion.d.ts
+#20 19.91 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/math/Color.d.ts
+#20 19.91 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/math/SphericalHarmonics3.d.ts
+#20 19.91 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/math/MathUtils.d.ts
+#20 19.91 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/objects/Sprite.d.ts
+#20 19.91 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/objects/LOD.d.ts
+#20 19.91 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/objects/InstancedMesh.d.ts
+#20 19.91 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/objects/SkinnedMesh.d.ts
+#20 19.91 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/objects/Skeleton.d.ts
+#20 19.91 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/objects/Bone.d.ts
+#20 19.91 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/objects/Mesh.d.ts
+#20 19.92 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/objects/LineSegments.d.ts
+#20 19.92 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/objects/LineLoop.d.ts
+#20 19.92 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/objects/Line.d.ts
+#20 19.92 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/objects/Points.d.ts
+#20 19.92 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/objects/Group.d.ts
+#20 19.92 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/WebGLMultisampleRenderTarget.d.ts
+#20 19.92 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/WebGLCubeRenderTarget.d.ts
+#20 19.92 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/WebGLMultipleRenderTargets.d.ts
+#20 19.93 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/WebGLRenderTarget.d.ts
+#20 19.93 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/WebGLRenderer.d.ts
+#20 19.93 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/WebGL1Renderer.d.ts
+#20 19.93 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/WebGL3DRenderTarget.d.ts
+#20 19.93 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/WebGLArrayRenderTarget.d.ts
+#20 19.93 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/shaders/ShaderLib.d.ts
+#20 19.93 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/shaders/UniformsLib.d.ts
+#20 19.94 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/shaders/UniformsUtils.d.ts
+#20 19.94 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/shaders/ShaderChunk.d.ts
+#20 19.94 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/webgl/WebGLBufferRenderer.d.ts
+#20 19.94 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/webgl/WebGLCapabilities.d.ts
+#20 19.94 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/webgl/WebGLClipping.d.ts
+#20 19.94 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/webgl/WebGLCubeUVMaps.d.ts
+#20 19.94 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/webgl/WebGLExtensions.d.ts
+#20 19.95 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/webgl/WebGLGeometries.d.ts
+#20 19.95 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/webgl/WebGLIndexedBufferRenderer.d.ts
+#20 19.95 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/webgl/WebGLInfo.d.ts
+#20 19.95 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/webgl/WebGLLights.d.ts
+#20 19.95 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/webgl/WebGLObjects.d.ts
+#20 19.95 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/webgl/WebGLProgram.d.ts
+#20 19.95 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/webgl/WebGLPrograms.d.ts
+#20 19.95 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/webgl/WebGLProperties.d.ts
+#20 19.95 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/webgl/WebGLRenderLists.d.ts
+#20 19.95 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/webgl/WebGLShader.d.ts
+#20 19.96 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/webgl/WebGLShadowMap.d.ts
+#20 19.96 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/webgl/WebGLState.d.ts
+#20 19.96 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/webgl/WebGLTextures.d.ts
+#20 19.96 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/webgl/WebGLUniforms.d.ts
+#20 19.96 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/webgl/WebGLUniformsGroups.d.ts
+#20 19.96 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/webxr/WebXRController.d.ts
+#20 19.96 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/webxr/WebXRManager.d.ts
+#20 19.96 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/webgl/WebGLUtils.d.ts
+#20 19.96 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/scenes/FogExp2.d.ts
+#20 19.97 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/scenes/Fog.d.ts
+#20 19.97 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/scenes/Scene.d.ts
+#20 19.97 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/textures/VideoTexture.d.ts
+#20 19.97 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/textures/DataTexture.d.ts
+#20 19.97 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/textures/DataTexture2DArray.d.ts
+#20 19.97 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/textures/DataTexture3D.d.ts
+#20 19.97 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/textures/CompressedTexture.d.ts
+#20 19.97 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/textures/CubeTexture.d.ts
+#20 19.97 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/textures/Data3DTexture.d.ts
+#20 19.97 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/textures/DataArrayTexture.d.ts
+#20 19.98 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/textures/CanvasTexture.d.ts
+#20 19.98 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/textures/DepthTexture.d.ts
+#20 19.98 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/textures/FramebufferTexture.d.ts
+#20 19.98 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/textures/Source.d.ts
+#20 19.98 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/textures/Texture.d.ts
+#20 19.98 [0m[32mDownload[0m https://deno.land/std@0.178.0/media_types/vendor/mime-db.v1.52.0.ts
+#20 19.98 [0m[32mDownload[0m https://deno.land/std@0.177.0/async/abortable.ts
+#20 19.98 [0m[32mDownload[0m https://deno.land/std@0.177.0/async/deadline.ts
+#20 19.98 [0m[32mDownload[0m https://deno.land/std@0.177.0/async/debounce.ts
+#20 19.98 [0m[32mDownload[0m https://deno.land/std@0.177.0/async/deferred.ts
+#20 19.98 [0m[32mDownload[0m https://deno.land/std@0.177.0/async/delay.ts
+#20 19.98 [0m[32mDownload[0m https://deno.land/std@0.177.0/async/mux_async_iterator.ts
+#20 19.99 [0m[32mDownload[0m https://deno.land/std@0.177.0/async/pool.ts
+#20 19.99 [0m[32mDownload[0m https://deno.land/std@0.177.0/async/tee.ts
+#20 19.99 [0m[32mDownload[0m https://deno.land/std@0.177.0/async/retry.ts
+#20 19.99 [0m[32mDownload[0m https://deno.land/std@0.173.0/_util/os.ts
+#20 19.99 [0m[32mDownload[0m https://deno.land/std@0.173.0/path/win32.ts
+#20 19.99 [0m[32mDownload[0m https://deno.land/std@0.173.0/path/posix.ts
+#20 19.99 [0m[32mDownload[0m https://deno.land/std@0.173.0/path/common.ts
+#20 19.99 [0m[32mDownload[0m https://deno.land/std@0.173.0/path/separator.ts
+#20 19.99 [0m[32mDownload[0m https://deno.land/std@0.173.0/path/_interface.ts
+#20 19.99 [0m[32mDownload[0m https://deno.land/std@0.173.0/path/glob.ts
+#20 20.00 [0m[32mDownload[0m https://deno.land/x/importmap@0.2.1/_util.ts
+#20 20.12 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/schema.ts
+#20 20.12 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/_state.ts
+#20 23.75 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/materials/Material.d.ts
+#20 23.75 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/extras/curves/ArcCurve.d.ts
+#20 23.75 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/extras/curves/CatmullRomCurve3.d.ts
+#20 23.75 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/extras/curves/CubicBezierCurve.d.ts
+#20 23.75 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/extras/curves/CubicBezierCurve3.d.ts
+#20 23.75 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/extras/curves/EllipseCurve.d.ts
+#20 23.75 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/extras/curves/LineCurve.d.ts
+#20 23.75 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/extras/curves/LineCurve3.d.ts
+#20 23.75 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/extras/curves/QuadraticBezierCurve.d.ts
+#20 23.76 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/extras/curves/QuadraticBezierCurve3.d.ts
+#20 23.76 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/extras/curves/SplineCurve.d.ts
+#20 23.76 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/geometries/BoxGeometry.d.ts
+#20 23.76 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/geometries/CapsuleGeometry.d.ts
+#20 23.76 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/geometries/CircleGeometry.d.ts
+#20 23.76 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/geometries/ConeGeometry.d.ts
+#20 23.76 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/geometries/CylinderGeometry.d.ts
+#20 23.76 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/geometries/DodecahedronGeometry.d.ts
+#20 23.76 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/geometries/EdgesGeometry.d.ts
+#20 23.76 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/geometries/ExtrudeGeometry.d.ts
+#20 23.76 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/geometries/IcosahedronGeometry.d.ts
+#20 23.77 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/geometries/LatheGeometry.d.ts
+#20 23.77 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/geometries/OctahedronGeometry.d.ts
+#20 23.77 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/geometries/PlaneGeometry.d.ts
+#20 23.77 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/geometries/PolyhedronGeometry.d.ts
+#20 23.77 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/geometries/RingGeometry.d.ts
+#20 23.77 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/geometries/ShapeGeometry.d.ts
+#20 23.77 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/geometries/SphereGeometry.d.ts
+#20 23.77 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/geometries/TetrahedronGeometry.d.ts
+#20 23.77 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/geometries/TorusGeometry.d.ts
+#20 23.77 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/geometries/TorusKnotGeometry.d.ts
+#20 23.77 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/geometries/TubeGeometry.d.ts
+#20 23.78 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/geometries/WireframeGeometry.d.ts
+#20 23.78 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/materials/MeshBasicMaterial.d.ts
+#20 23.78 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/materials/ShadowMaterial.d.ts
+#20 23.78 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/materials/SpriteMaterial.d.ts
+#20 23.78 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/materials/RawShaderMaterial.d.ts
+#20 23.78 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/materials/ShaderMaterial.d.ts
+#20 23.78 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/materials/PointsMaterial.d.ts
+#20 23.78 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/materials/MeshPhysicalMaterial.d.ts
+#20 23.78 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/materials/MeshStandardMaterial.d.ts
+#20 23.79 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/materials/MeshPhongMaterial.d.ts
+#20 23.79 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/materials/MeshToonMaterial.d.ts
+#20 23.79 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/materials/MeshNormalMaterial.d.ts
+#20 23.79 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/materials/MeshLambertMaterial.d.ts
+#20 23.79 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/materials/MeshDepthMaterial.d.ts
+#20 23.79 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/materials/MeshDistanceMaterial.d.ts
+#20 23.79 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/materials/MeshMatcapMaterial.d.ts
+#20 23.80 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/materials/LineDashedMaterial.d.ts
+#20 23.80 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/materials/LineBasicMaterial.d.ts
+#20 23.80 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/math/ColorManagement.d.ts
+#20 23.80 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/webgl/WebGLAttributes.d.ts
+#20 23.80 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/webgl/WebGLCubeMaps.d.ts
+#20 23.80 [0m[32mDownload[0m https://esm.sh/v135/@types/three@0.143.2/src/renderers/webgl/WebGLBindingStates.d.ts
+#20 23.80 [0m[32mDownload[0m https://esm.sh/v135/@types/webxr@0.5.10/index.d.ts
+#20 23.81 [0m[32mDownload[0m https://deno.land/std@0.173.0/path/_constants.ts
+#20 23.81 [0m[32mDownload[0m https://deno.land/std@0.173.0/path/_util.ts
+#20 23.81 [0m[32mDownload[0m https://deno.land/std@0.173.0/_util/asserts.ts
+#20 23.81 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/schema/mod.ts
+#20 24.94 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/schema/core.ts
+#20 24.94 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/schema/default.ts
+#20 24.94 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/schema/extended.ts
+#20 24.94 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/schema/failsafe.ts
+#20 24.94 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/schema/json.ts
+#20 25.09 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/_type/mod.ts
+#20 25.14 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/_type/binary.ts
+#20 25.14 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/_type/bool.ts
+#20 25.14 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/_type/float.ts
+#20 25.14 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/_type/function.ts
+#20 25.14 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/_type/int.ts
+#20 25.14 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/_type/map.ts
+#20 25.14 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/_type/merge.ts
+#20 25.15 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/_type/nil.ts
+#20 25.15 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/_type/omap.ts
+#20 25.15 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/_type/pairs.ts
+#20 25.15 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/_type/regexp.ts
+#20 25.15 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/_type/seq.ts
+#20 25.15 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/_type/set.ts
+#20 25.15 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/_type/str.ts
+#20 25.15 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/_type/timestamp.ts
+#20 25.16 [0m[32mDownload[0m https://deno.land/std@0.188.0/yaml/_type/undefined.ts
+#20 25.40 [0m[32mDownload[0m https://deno.land/std@0.188.0/io/buffer.ts
+#20 25.68 [0m[32mDownload[0m https://deno.land/std@0.188.0/_util/asserts.ts
+#20 25.68 [0m[32mDownload[0m https://deno.land/std@0.188.0/bytes/copy.ts
+#20 25.68 [0m[32mDownload[0m https://deno.land/std@0.188.0/types.d.ts
+#20 DONE 30.1s
+
+#21 exporting to image
+#21 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#21 exporting layers
+#21 exporting layers 0.9s done
+#21 writing image sha256:c9b411435bc74bbb33d731d1fe4e238ed08b753e33a05dc7d92bf54ab778eb08 done
+#21 naming to docker.io/moonstripe/kojinglick done
+#21 DONE 1.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
