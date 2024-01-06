@@ -5,7 +5,7 @@
 
 If you've been following web development, you've probably seen the hype about [htmx](https://htmx.org/). In simple terms, it's a front-end web development framework in which the goal is to minimize the amount of javascript that gets shipped to the browser. The philosophy behind it seeks to return to the golden age of hypermedia-driven applications, which means that rather than receiving JSON data from the server, you receive whole html blocks that get swapped into your application with lightening speed. 
 
-This tutorial is a simple quickstart guide for building your first htmx application using Rust. Specifically, we'll be using the [actix-web server framework](https://actix.rs/docs/) for serving our requests, as well as the [Tera templating engine](https://keats.github.io/tera/docs/) to render the actual html. Follow along, or clone the repository [here](). 
+This tutorial is a simple quickstart guide for building your first htmx application using Rust. Specifically, we'll be using the [actix-web server framework](https://actix.rs/docs/) for serving our requests, as well as the [Tera templating engine](https://keats.github.io/tera/docs/) to render the actual html. Follow along, or clone the repository [here](https://github.com/moonstripe/actix_htmx). 
 
 In order to follow along, you'll only need to install [Rust](https://www.rust-lang.org/tools/install). Optionally, you can make use of my favorite css framework, [tailwindcss](https://tailwindcss.com/docs/installation). You'll need to install [Nodejs](https://nodejs.org/en/download) to add tailwind to your application. Let's get started!
 
