@@ -38,8 +38,8 @@ This will add the required dependencies for the actix-web server framework, logg
 Next, let's set up the `/templates` directory, which will house our html templates.
 
 ```
-mkdir /templates
-touch /templates/main.html
+mkdir templates
+touch templates/main.html
 ```
 
 In the IDE of your choice, add the following boilerplate to your `main.html`.
@@ -49,7 +49,7 @@ In the IDE of your choice, add the following boilerplate to your `main.html`.
 
 <head>
 
-	<title>actix htmx p5</title>
+	<title>actix htmx</title>
 	
 	<script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
 
@@ -180,13 +180,13 @@ Remember our `templates/main.html` has buttons that refer to a `/increment` and 
 #[get("/")]
 async fn home(tera: Data<Tera>, data: Data<AppStateCounter>) -> impl Responder {
 
-let counter = data.counter.lock().unwrap();
+	let counter = data.counter.lock().unwrap();
 
-let mut home_context = Context::new();
+	let mut home_context = Context::new();
 
-home_context.insert("counter_value", &*counter);
+	home_context.insert("counter_value", &*counter);
 
-HttpResponse::Ok().body(tera.render("main.html", &home_context).unwrap())
+	HttpResponse::Ok().body(tera.render("main.html", &home_context).unwrap())
 
 }
 
