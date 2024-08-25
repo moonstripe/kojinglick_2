@@ -34,8 +34,6 @@ ENV DENO_INSTALL_ROOT /usr/local
 ARG GIT_REVISION
 ENV DENO_DEPLOYMENT_ID=${GIT_REVISION}
 
-RUN deno upgrade --version 1.39.2
-
 COPY . .
 RUN deno cache main.ts
 

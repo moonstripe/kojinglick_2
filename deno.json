@@ -1,11 +1,27 @@
 {
   "tasks": {
     "start:dev": "deno run -A --watch=static/,routes/ dev.ts",
-    "start": "deno run -A --watch=static/,routes/ main.ts"
+    "start": "deno run -Ar --watch=static/,routes/ main.ts",
+    "build": "deno run -A dev.ts build",
+    "preview": "deno run -A main.ts",
+    "deploy": "rm -f deno.lock && docker build --build-arg TARGETPLATFORM=linux/arm64 --build-arg VERSION=v1.36.1 --build-arg GIT_REVISION=$(git rev-parse HEAD)  --no-cache -t moonstripe/kojinglick . &> build.log && docker push moonstripe/kojinglick && kubectl rollout restart deployment kojinglick"
   },
-  "importMap": "./import_map.json",
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "jsxImportSource": "preact"
-  }
+  "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" },
+  "imports": {
+    "$fresh/": "https://deno.land/x/fresh@1.6.1/",
+    "preact": "https://esm.sh/preact@10.19.2",
+    "preact/": "https://esm.sh/preact@10.19.2/",
+    "preact-render-to-string": "https://esm.sh/*preact-render-to-string@5.2.6",
+    "@preact/signals": "https://esm.sh/*@preact/signals@1.2.1",
+    "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.0",
+    "twind": "https://esm.sh/twind@0.16.19",
+    "twind/": "https://esm.sh/twind@0.16.19/",
+    "markdown": "https://deno.land/x/markdown_moon@0.0.2/mod.ts",
+    "hljs": "https://unpkg.com/@highlightjs/cdn-assets@11.6.0/es/highlight.min.js",
+    "three": "https://esm.sh/three@0.143.0",
+    "orbit": "https://esm.sh/three@0.143.0/examples/jsm/controls/OrbitControls",
+    "AsciiEffect": "./utils/js/AsciiEffect.js"
+  },
+  "lint": { "rules": { "tags": ["fresh", "recommended"] } },
+  "exclude": ["**/_fresh/*"]
 }
